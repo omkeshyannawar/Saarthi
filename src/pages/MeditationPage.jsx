@@ -3,7 +3,7 @@ import "../styles/MeditationPage.css";
 import BackFeature from '../components/BackFeature'
 import rain from "../assets/Audio/rain.mp3";
 import ocean from "../assets/Audio/ocean.mp3";
-import Forest from "../assets/Audio/Forest.mp3";
+import Forest from "../assets/Audio/forest.mp3";
 
 
 const MeditationPage = () => {
