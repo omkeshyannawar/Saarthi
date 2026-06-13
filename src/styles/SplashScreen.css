@@ -1,0 +1,77 @@
+.splashScreen {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* background: linear-gradient(135deg, #d8b4e2, #c8a2c8, #cc7cf1); */
+  background-color: rgba(0, 0, 0, 0.589);
+}
+
+.saarthiText {
+  font-family: "Cinzel", serif;
+  font-size: 5rem;
+  color: #ff2d73;
+
+  letter-spacing: 5px;
+
+  animation:
+    slideIn 1.5s ease forwards,
+    slideOut 1.5s ease forwards 3s;
+}
+
+.omkeshText {
+  margin-top: 10px;
+
+  /* color: rgb(10, 10, 10); */
+  color: #e0e0e0;
+  text-shadow: rgb(255, 255, 255);
+  font-size: 1.5rem;
+
+  animation:
+    slideIn 1.7s ease forwards,
+    slideOut 1.7s ease forwards 2.3s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+
+    transform: translateX(-300px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+
+    transform: translateX(300px);
+  }
+}
+
+@media (max-width: 768px) {
+  .saarthiText {
+    font-size: 3rem;
+  }
+
+  .omkeshText {
+    font-size: 1rem;
+  }
+}

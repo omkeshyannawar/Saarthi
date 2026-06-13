@@ -1,0 +1,11 @@
+body {
+  font-family: "Manrope", sans-serif;
+  background-image: url(./assets/project-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  font-family: "Manrope", sans-serif;
+}

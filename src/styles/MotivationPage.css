@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.motivationPage {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background-image: url("../assets/quote-bg.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+
+  border-radius: 24px;
+}
+
+.quoteCard {
+  position: relative;
+
+  z-index: 2;
+
+  width: 800px;
+
+  max-width: 90%;
+
+  min-height: 350px;
+
+  padding: 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  color: white;
+}
+
+.pageTitle {
+  text-align: center;
+
+  font-size: 2.3rem;
+
+  margin-bottom: 20px;
+
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.quoteText {
+  font-size: 1.7rem;
+
+  line-height: 1.8;
+
+  text-align: center;
+
+  font-style: italic;
+}
+
+.quoteAuthor {
+  text-align: right;
+
+  margin-top: 20px;
+
+  font-size: 1.1rem;
+
+  opacity: 0.9;
+}
+
+.changeQuoteBtn {
+  align-self: flex-end;
+
+  margin-top: 30px;
+
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #f59e0b, #ea580c);
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.changeQuoteBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(234, 88, 12, 0.35);
+}
+
+.loading {
+  text-align: center;
+
+  font-size: 1.3rem;
+
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .quoteCard {
+    min-height: 300px;
+
+    padding: 25px;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .quoteText {
+    font-size: 1.3rem;
+  }
+
+  .quoteAuthor {
+    font-size: 1rem;
+  }
+
+  .changeQuoteBtn {
+    width: 100%;
+  }
+}

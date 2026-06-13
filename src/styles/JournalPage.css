@@ -1,0 +1,499 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.journalPage {
+  position: fixed;
+  inset: 0;
+
+  padding: 25px;
+
+  width: 100%;
+
+  background-image: url("../assets/journal-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+
+.journalTitle {
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  font-size: 2.8rem;
+
+  font-weight: 700;
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25);
+
+  border-radius: 24px;
+}
+
+
+
+.journalTopSection {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: flex-start;
+}
+
+
+
+.infoCard {
+  flex: 0 0 360px;
+
+  height: calc(100vh - 120px);
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.currentDate {
+  font-size: 1.1rem;
+
+  font-weight: 600;
+}
+
+
+
+.moodContainer {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+
+  margin-top: 10px;
+}
+
+.moodContainer button {
+  width: 44px;
+
+  height: 44px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: rgba(0, 0, 0, 0.25);
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.moodContainer button:hover {
+  transform: scale(1.1);
+}
+
+.selectedMood {
+  background: rgba(124, 58, 237, 0.4);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transform: scale(1.1);
+}
+
+
+
+.starsContainer {
+  margin-top: 10px;
+}
+
+.starsContainer span {
+  font-size: 1.6rem;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.starsContainer span:hover {
+  transform: scale(1.15);
+}
+
+
+
+.saveBtn {
+  margin-top: auto;
+
+  width: 100%;
+
+  border: none;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8b5cf6,
+      #7c3aed
+    );
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.saveBtn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 20px rgba(124, 58, 237, 0.4);
+}
+
+
+
+.rightPanel {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: calc(100vh - 120px);
+
+  overflow: hidden;
+}
+
+
+
+.journalCard {
+  padding: 20px;
+
+  flex-shrink: 0;
+}
+
+.journalCard h3 {
+  margin-bottom: 15px;
+}
+
+.journalCard textarea {
+  width: 100%;
+
+  height: 140px;
+
+  border: none;
+
+  outline: none;
+
+  resize: none;
+
+  border-radius: 16px;
+
+  padding: 15px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 1rem;
+}
+
+.journalCard textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+.historySection {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding-top: 20px;
+
+  padding-right: 10px;
+}
+
+.historySection h2 {
+  margin-bottom: 20px;
+}
+
+/* CUSTOM SCROLLBAR */
+
+.historySection::-webkit-scrollbar {
+  width: 8px;
+}
+
+.historySection::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+}
+
+.historySection::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+
+  border-radius: 20px;
+}
+
+
+
+.entriesGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 20px;
+}
+
+
+
+.entryCard {
+  min-height: 180px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.entryCard:hover {
+  transform:
+    translateY(-5px)
+    scale(1.04);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.entryCard h4 {
+  margin-bottom: 10px;
+}
+
+.entryMood {
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+}
+
+.entryStars {
+  color: #facc15;
+
+  margin-bottom: 10px;
+}
+
+.entryPreview {
+  font-size: 0.9rem;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  line-height: 1.4;
+}
+
+
+
+.modalOverlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 700px;
+
+  max-width: 90%;
+
+  max-height: 80vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  position: relative;
+
+  animation: popup 0.25s ease;
+}
+
+.closeBtn {
+  position: absolute;
+
+  top: 15px;
+
+  right: 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+}
+
+.modalMood {
+  font-size: 2.2rem;
+
+  margin: 20px 0;
+}
+
+.modalStars {
+  color: #facc15;
+
+  font-size: 1.2rem;
+
+  margin-bottom: 20px;
+}
+
+.modalJournal {
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+.editTextarea {
+  width: 100%;
+  min-height: 220px;
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  margin-top: 15px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.editBtn,
+.saveEditBtn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .journalPage {
+    position: static;
+
+    overflow-y: auto;
+  }
+
+  .journalTopSection {
+    flex-direction: column;
+  }
+
+  .infoCard {
+    width: 100%;
+
+    height: auto;
+  }
+
+  .rightPanel {
+    width: 100%;
+
+    height: auto;
+  }
+
+  .historySection {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .journalTitle {
+    font-size: 2rem;
+  }
+
+  .entriesGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,337 @@
+/* MindMate.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mindmatePage {
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #d8b4e2,
+    #c8a2c8,
+    #a87bbd
+  );
+}
+
+.mindmateContainer {
+  width: 100%;
+  max-width: 1000px;
+  height: 85vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.15)
+    0px 8px 32px;
+}
+
+/* HEADER */
+
+.headerSection {
+  padding: 25px;
+
+  text-align: center;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.15);
+}
+
+.headerSection h1 {
+  color: white;
+
+  font-size: 2.2rem;
+
+  margin-bottom: 10px;
+}
+
+.headerSection p {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 1rem;
+
+  margin-bottom: 15px;
+}
+
+.clearBtn {
+  border: none;
+
+  padding: 10px 18px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.2);
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.clearBtn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* WELCOME */
+
+.welcomeSection {
+  padding: 20px;
+}
+
+.welcomeSection h2 {
+  color: white;
+
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.quickActions {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.quickActions button {
+  border: none;
+
+  padding: 12px 18px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s ease;
+}
+
+.quickActions button:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,0.25);
+}
+
+/* CHAT */
+
+.chatContainer {
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.avatar {
+  min-width: 40px;
+
+  height: 40px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.15);
+
+  font-size: 1.2rem;
+}
+
+.messageContent {
+  max-width: 75%;
+
+  padding: 14px 18px;
+
+  border-radius: 18px;
+
+  color: white;
+
+  line-height: 1.6;
+
+  background: rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(10px);
+}
+
+/* USER MESSAGE */
+
+.user {
+  justify-content: flex-end;
+}
+
+.user .avatar {
+  order: 2;
+}
+
+.user .messageContent {
+  order: 1;
+
+  background:
+    rgba(255,255,255,0.22);
+}
+
+/* AI MESSAGE */
+
+.model {
+  justify-content: flex-start;
+}
+
+/* INPUT */
+
+.inputContainer {
+  display: flex;
+
+  gap: 10px;
+
+  padding: 20px;
+
+  border-top: 1px solid
+    rgba(255,255,255,0.15);
+}
+
+.inputContainer input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  padding: 14px 18px;
+
+  border-radius: 40px;
+
+  background: rgba(255,255,255,0.12);
+
+  color: white;
+
+  font-size: 1rem;
+}
+
+.inputContainer input::placeholder {
+  color:
+    rgba(255,255,255,0.6);
+}
+
+.inputContainer button {
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  background: white;
+
+  color: #8d5ca6;
+
+  transition: 0.3s ease;
+}
+
+.inputContainer button:hover {
+  transform: translateY(-2px);
+}
+
+/* SCROLLBAR */
+
+.chatContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatContainer::-webkit-scrollbar-thumb {
+  background:
+    rgba(255,255,255,0.3);
+
+  border-radius: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .mindmateContainer {
+    height: 90vh;
+  }
+
+  .headerSection h1 {
+    font-size: 1.8rem;
+  }
+
+  .messageContent {
+    max-width: 90%;
+  }
+
+  .inputContainer {
+    flex-direction: column;
+  }
+
+  .inputContainer button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .quickActions {
+    flex-direction: column;
+  }
+
+  .quickActions button {
+    width: 100%;
+  }
+
+  .headerSection h1 {
+    font-size: 1.5rem;
+  }
+
+  .messageContent {
+    font-size: 0.95rem;
+  }
+}

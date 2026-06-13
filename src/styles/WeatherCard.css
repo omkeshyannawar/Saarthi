@@ -1,0 +1,76 @@
+.weatherCard {
+  /* height: 50%; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: rgba(226, 43, 128, 0);
+  /* margin-top: 20px; */
+  margin: 0 auto;
+  border-radius: 15px;
+  text-align: center;
+}
+.weatherBottom h1 {
+  font-size: 5rem;
+  color: white;
+  margin-top: -25px;
+  font-weight: 700;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 0, 0, 0.425);
+}
+
+.weatherTop {
+  padding: 20px;
+}
+.weatherTop h1 {
+  font-size: 4.2rem;
+  color: white;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 0, 0, 0.466);
+}
+.weatherTop h3 {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .weatherCard {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    text-align: center;
+  }
+
+  .weatherTop {
+    padding: 0;
+  }
+
+  .weatherTop h1 {
+    font-size: 3rem;
+    background-color: rgba(190, 190, 190, 0.527);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .weatherTop h3 {
+    font-size: 1.1rem;
+  }
+
+  .weatherBottom h1 {
+    font-size: 3.5rem;
+    /* border: 0.2px solid black; */
+    margin-top: 0;
+    background-color: rgba(190, 190, 190, 0.527);
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+  }
+}

@@ -1,0 +1,268 @@
+.todoPage {
+  min-height: 100vh;
+  padding: 20px;
+  background: #1f1f1f;
+  color: white;
+}
+
+.todoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.pageTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.todoContent {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+
+.formSection {
+  width: 30%;
+  min-width: 300px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.formSection input,
+.formSection textarea {
+  width: 100%;
+  padding: 15px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 12px;
+
+  font-size: 1rem;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+}
+
+.formSection textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.formSection input::placeholder,
+.formSection textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.importantRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.importantRow label {
+  color: #ff6b6b;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.importantRow input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.addBtn {
+  margin-top: 10px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 15px;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  background: #7c3aed;
+
+  color: white;
+
+  transition: 0.3s ease;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+}
+
+.taskContainer {
+  flex: 1;
+
+  min-height: 75vh;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(10px);
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  overflow-y: auto;
+}
+
+.taskCard {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  transition: 0.3s ease;
+}
+
+.taskCard:hover {
+  transform: translateY(-3px);
+}
+
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.taskHeader h2 {
+  font-size: 1.2rem;
+}
+
+.importantBadge {
+  background: #ff3b30;
+
+  color: white;
+
+  padding: 5px 10px;
+
+  border-radius: 50px;
+
+  font-size: 0.8rem;
+
+  font-weight: bold;
+}
+
+.taskCard p {
+  margin-bottom: 15px;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.actions button:first-child {
+  background: #22c55e;
+  color: white;
+}
+
+.actions button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.actions button:hover {
+  transform: scale(1.05);
+}
+
+.completedTitle,
+.completedText {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.emptyTask {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.backBtn {
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  background: #ff6b6b;
+
+  color: white;
+
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .todoContent {
+    flex-direction: column;
+  }
+
+  .formSection {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .taskContainer {
+    min-height: 500px;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .todoHeader {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .pageTitle {
+    text-align: center;
+  }
+}
